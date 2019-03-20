@@ -73,6 +73,8 @@ Note that for this problem, the dataset are not seperatable using a linear SVM. 
 
 <img src="README.assets/SVM_o.png" align="middle" width="800px"/>
 
+<img src="README.assets/SVM_g.png" align="middle" width="800px"/>
+
 The result shows that for training data, we could reach an accuracy over 90%. However, for testing data, the accuracy is really low. By chacking the data, the positive set and the negative set have massive intersecting area, and the dimension for each sample is too high for SVM. Therefore, the SVM would go overfitting after training. We conclude that the samples are not seperatable using linear method. Hence, we choose to use neural network for out final model. 
 
 #### Neural Network:
@@ -81,3 +83,6 @@ This is final model for our project. We used two hidden layers and adam optimize
 
 <img src="README.assets/NN_o.png" align="middle" width="800px"/>
 
+<img src="README.assets/NN_g1.png" align="middle" width="800px"/>
+
+<img src="README.assets/NN_g2.png" align="middle" width="800px"/>
