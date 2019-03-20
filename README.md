@@ -1,6 +1,6 @@
-# CS433.7 Final Project
 
-<h2 align="middle">Transaction Prediction </h2>
+
+<h2 align="middle">CS433.7 Final Project - Transaction Prediction </h2>
 
 ---
 
