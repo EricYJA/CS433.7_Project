@@ -71,7 +71,7 @@ Note that the tensorboard graphs are stored under `graph_SVM` and `graph_NN`. To
 
 Note that for this problem, the dataset are not seperatable using a linear SVM. Hence, We implemented the SVM using the gaussian kernel to implemented the nonlinear SVM. The basic idea is to use the gaussion kernel to plot the data in a higher dimension where its seperatable. For the training data, we have the training result below. 
 
-![Screen Shot 2019-03-20 at 1.33.23 PM](README.assets/Screen Shot 2019-03-20 at 1.33.23 PM.png)
+<img src="README.assets/SVM_o.png" align="middle" width="800px"/>
 
 The result shows that for training data, we could reach an accuracy over 90%. However, for testing data, the accuracy is really low. By chacking the data, the positive set and the negative set have massive intersecting area, and the dimension for each sample is too high for SVM. Therefore, the SVM would go overfitting after training. We conclude that the samples are not seperatable using linear method. Hence, we choose to use neural network for out final model. 
 
@@ -79,4 +79,5 @@ The result shows that for training data, we could reach an accuracy over 90%. Ho
 
 This is final model for our project. We used two hidden layers and adam optimizer for this neural network. The detailed structure is shown in the tensorboard graph. For this model, instead of using accuracy as the criteria, we choose to use the AUC as the criteria since the data is highly unbalanced. When training, we also balanced the data to gain a better prediction. Compare to SVM, this model would have better performance in real cases.
 
-![Screen Shot 2019-03-20 at 1.33.44 PM](README.assets/Screen Shot 2019-03-20 at 1.33.44 PM.png)
+<img src="README.assets/NN_o.png" align="middle" width="800px"/>
+
