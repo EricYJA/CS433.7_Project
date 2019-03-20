@@ -4,7 +4,7 @@
 
 ---
 
-###Contributor:
+### Contributor:
 
 [Hang Zhu](https://github.com/leonzhuLGU)
 
@@ -14,7 +14,7 @@ Note that both contributors contributed to the project. The Github contribution 
 
    
 
-###Data Source:
+### Data Source:
 
 https://www.kaggle.com/c/santander-customer-transaction-prediction/data
 
