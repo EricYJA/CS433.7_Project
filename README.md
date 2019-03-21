@@ -16,6 +16,7 @@ Note that both contributors contributed to the project. The Github contribution 
 
 ### Data Source:
 
+You can download the dataset from the link below:
 https://www.kaggle.com/c/santander-customer-transaction-prediction/data
 
 
