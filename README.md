@@ -91,3 +91,7 @@ This is final model for our project. We used two hidden layers and adam optimize
 <img src="README.assets/NN_g1.png" align="middle" width="800px"/>
 
 <img src="README.assets/NN_g2.png" align="middle" width="800px"/>
+
+#### Conclusion
+
+The final result we get is about 85% test AUC and 77% test accuracy. Although the accuracy is not very good compared to the naïve model, which always predict negative and get 90% accuracy, the company can get more information from our model. For naïve model, we cannot detect any customers which are willing to buy the products. However, our model successfully detects about 65% of them. Based on our model, the company can make some marketing plan to fit the need of these customers.
