@@ -80,7 +80,7 @@ Note that for this problem, the dataset are not seperatable using a linear SVM. 
 
 <img src="README.assets/SVM_g.png" align="middle" width="800px"/>
 
-The result shows that for training data, we could reach an accuracy over 90%. However, for testing data, the accuracy is really low (we do not show the result here). By checking the data, the positive samples and the negative samples have massive intersecting area, and the dimension for each sample is too high for SVM. Therefore, possiblely, our model overfitted the training data, which leads to the unpleasant result of the testing data.
+The result shows that for training data, we could reach an accuracy over 90%. However, for testing data, the accuracy is really low (we do not show the result here). By checking the data, the positive samples and the negative samples have massive intersecting area, and the dimension for each sample is very high. Therefore, our model overfitted the training data, which leads to the unpleasant result of the testing data.
 
 #### Neural Network:
 
