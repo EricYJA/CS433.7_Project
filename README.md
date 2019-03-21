@@ -79,6 +79,8 @@ The result shows that for training data, we could reach an accuracy over 90%. Ho
 
 #### Neural Network:
 
+Technics we use: simple random oversampling; batch normalization; leaky relu; Adam optimizer; exponential decay of the learning rate; batch gradient decent.
+
 This is final model for our project. We used two hidden layers and adam optimizer for this neural network. The detailed structure is shown in the tensorboard graph. For this model, instead of using accuracy as the criteria, we choose to use the AUC as the criteria since the data is highly unbalanced. When training, we also balanced the data to gain a better prediction. Compare to SVM, this model would have better performance in real cases.
 
 <img src="README.assets/NN_o.png" align="middle" width="800px"/>
