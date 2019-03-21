@@ -45,7 +45,7 @@ The goal for this project is to predict if a customer would make the transaction
 
 ### Data:
 
-The data is loaded from 2 `.csv` file from the link in listed in the data source. The sample size is 200000. For each sample, there are 200 features. After testing, we have that the distribution for each of the feature is about normal distribution. For example, lable 0's distribution is shown below. 
+The data is loaded from 2 `.csv` file from the link provided in the data source. The sample size is 200000. For each sample, there are 200 features. After some plotting, we have observed that the distribution for each of the feature is approximately normal distributed. For example, lable 0's distribution is shown below. 
 
   <table style="width=100%">
     <tr>
@@ -60,7 +60,7 @@ The data is loaded from 2 `.csv` file from the link in listed in the data source
     </tr>
   </table>
 
-For the negative/positive ratio however, the ratio is unballanced and the negative is the majority. As we can see from the picture above. 
+For the negative/positive ratio however, the ratio is imbalanced and the negative samples is the majority. As we can see from the plot above. 
 
 ---
 
@@ -74,19 +74,19 @@ Note that the tensorboard graphs are stored under `graph_SVM` and `graph_NN`. To
 
 #### SVM:
 
-Note that for this problem, the dataset are not seperatable using a linear SVM. Hence, We implemented the SVM using the gaussian kernel to implemented the nonlinear SVM. The basic idea is to use the gaussion kernel to plot the data in a higher dimension where its seperatable. For the training data, we have the training result below. 
+Note that for this problem, the dataset are not seperatable using a linear SVM. Hence, We implemented the nonlinear SVM totally from scratch paper using the gaussian kernel. The basic idea is to use the gaussion kernel to project the data to a higher dimension space which may make it seperatable. For the training data, we have the training result below. 
 
 <img src="README.assets/SVM_o.png" align="middle" width="800px"/>
 
 <img src="README.assets/SVM_g.png" align="middle" width="800px"/>
 
-The result shows that for training data, we could reach an accuracy over 90%. However, for testing data, the accuracy is really low. By checking the data, the positive set and the negative set have massive intersecting area, and the dimension for each sample is too high for SVM. Therefore, the SVM would go overfitting after training. We conclude that the samples are not seperatable using linear method. Hence, we choose to use neural network for out final model. 
+The result shows that for training data, we could reach an accuracy over 90%. However, for testing data, the accuracy is really low (we do not show the result here). By checking the data, the positive samples and the negative samples have massive intersecting area, and the dimension for each sample is too high for SVM. Therefore, possiblely, our model overfitted the training data, which leads to the unpleasant result of the testing data.
 
 #### Neural Network:
 
 Technics we use: simple random oversampling; batch normalization; leaky relu; Adam optimizer; exponential decay of the learning rate; batch gradient decent.
 
-This is final model for our project. We used two hidden layers and adam optimizer for this neural network. The detailed structure is shown in the tensorboard graph. For this model, instead of using accuracy as the criteria, we choose to use the AUC as the criteria since the data is highly unbalanced. When training, we also balanced the data to gain a better prediction. Compare to SVM, this model would have better performance in real cases.
+This is the final model for our project. We used two hidden layers and Adam optimizer for this neural network. The detailed structure is shown in the tensorboard graph. For this model, instead of using accuracy as the metric, we choose to use the AUC as the criteria since the data is highly unbalanced (Accuracy may lie, for example, a naive model which always predict negative will get 90% accuracy). Before training, we balanced the data using simple over sampling. Compare to SVM, this modle got better performance.
 
 <img src="README.assets/NN_o.png" align="middle" width="800px"/>
 
@@ -96,4 +96,4 @@ This is final model for our project. We used two hidden layers and adam optimize
 
 #### Conclusion
 
-The final result we get is about 85% test AUC and 77% test accuracy. Although the accuracy is not very good compared to the naïve model, which always predict negative and get 90% accuracy, the company can get more information from our model. For naïve model, we cannot detect any customers which are willing to buy the products. However, our model successfully detects about 65% of them. Based on our model, the company can make some marketing plan to fit the need of these customers.
+The final result we get is about 85% test AUC and 77% test accuracy. Although the accuracy is not very good compared to the naïve model, which always predict negative and get 90% accuracy, the company can get more information from our model. For naïve model, we cannot detect any customers which are willing to buy the products. However, our model successfully detects about 65% of them. Based on our model, the company can make some marketing plan to fit the need of the customers.
